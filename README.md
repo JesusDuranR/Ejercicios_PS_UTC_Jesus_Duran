@@ -53,7 +53,7 @@
 		<li>Si presionamos en Registro nos pedirá nombre de usuario y contraseña
 			<ul>
 				<li>Si un usuario ya estaba registrado mostrará un mensaje diciéndolo y preguntará si desea intentarlo con otro nombre de usuario</li>
-			<ul>
+			</ul>
 		</li>
 		<li>Si no hay un usuario existente con el mismo nombre se creará la cuenta</li>
 		<li>Si seleccionamos la opción Login del menú principal nos pedirá el nombre de usuario y contraseña
