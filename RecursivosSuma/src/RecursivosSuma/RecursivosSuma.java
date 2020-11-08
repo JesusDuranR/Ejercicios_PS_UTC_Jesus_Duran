@@ -6,9 +6,11 @@ import java.util.Arrays;
 public class RecursivosSuma {
 
 	public static void main(String[] args) {
-		
-		ArrayList<Integer> numeros =  new ArrayList<Integer>(Arrays.asList(new Integer[]{10,6,5,7,3,2,1,4}));
-        int objetivo = 20;
+		//Entradas
+		ArrayList<Integer> numeros =  new ArrayList<Integer>(Arrays.asList(new Integer[]{10,6,5,7,1,4}));//Lista de números
+        int objetivo = 15;//Número objetivo
+        
+        //Llamada de la función recursiva
         sumaRecursiva(numeros,objetivo,new ArrayList<Integer>());
 	}
 	static void sumaRecursiva(ArrayList<Integer> numeros, int objetivo, ArrayList<Integer> fragmento) {

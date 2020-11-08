@@ -7,36 +7,51 @@ public class PINAdivinar {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String PIN = JOptionPane.showInputDialog("Ingresa tu PIN de 4 digitos");
-		String generadoPIN;
-		if(isNumeric(PIN)) {
-			if(PIN.length() != 4)
-				JOptionPane.showMessageDialog(null, "El PIN no es de 4 digitos");
-			else {
-				
-				/*if(PIN.equals(generadoPIN)) {
-					JOptionPane.showMessageDialog(null, "El PIN del usuario fue adivinado"
-							+ "\nPIN usuario: " + PIN
-							+ "\nPIN generado: " + generadoPIN);
-				}else {
-					JOptionPane.showMessageDialog(null, "El PIN del usuario no fue adivinado"
-							+ "\nPIN usuario: " + PIN
-							+ "\nPIN generado: " + generadoPIN);
-				}*/
-				do {
-					generadoPIN = adivinarPIN();
-					JOptionPane.showMessageDialog(null, ""
-							+ "\nPIN usuario: " + PIN
-							+ "\nPIN generado: " + generadoPIN);
-					if(PIN.equals(generadoPIN)) {
-						JOptionPane.showMessageDialog(null, "El PIN del usuario fue adivinado");
+		int opcion = 0;
+		String opcionMenu = "";
+		do{
+			opcionMenu = JOptionPane.showInputDialog("Que deseas hacer:"
+					+ "\n1. Ingresar PIN"
+					+ "\n2. Salir"
+					+ "\nEscoja su opcion:");
+			if(!isNumeric(opcionMenu)) {
+				JOptionPane.showMessageDialog(null, "Ingrese un valor numérico");
+			}else {
+				opcion = Integer.parseInt(opcionMenu);
+				switch(opcion) {
+					case 1:
+						String PIN = JOptionPane.showInputDialog("Ingresa tu PIN de 4 digitos");
+						String generadoPIN;
+						if(isNumeric(PIN)) {
+							if(PIN.length() != 4)
+								JOptionPane.showMessageDialog(null, "El PIN no es de 4 digitos");
+							else {
+								generadoPIN = adivinarPIN();
+								if(PIN.equals(generadoPIN)) {
+									JOptionPane.showMessageDialog(null, "El PIN del usuario fue adivinado"
+											+ "\nPIN usuario: " + PIN
+											+ "\nPIN generado: " + generadoPIN);
+								}else {
+									JOptionPane.showMessageDialog(null, "El PIN del usuario no fue adivinado"
+											+ "\nPIN usuario: " + PIN
+											+ "\nPIN generado: " + generadoPIN);
+								}
+							}
+						}else {
+							JOptionPane.showMessageDialog(null, "El PIN no es númerico");
+						}
 						break;
-					}
-				}while(!PIN.equals(generadoPIN));
+					case 2:
+						JOptionPane.showMessageDialog(null, "Gracias por usar mi programa, adiós");
+						
+						break;
+					default:
+						JOptionPane.showMessageDialog(null, "Ingrese una opción válida");
+						break;
+						
+				}
 			}
-		}else {
-			JOptionPane.showMessageDialog(null, "El PIN no es númerico");
-		}
+		}while(opcion!=2);
 	}
 	
 	public static boolean isNumeric(String cadena) {

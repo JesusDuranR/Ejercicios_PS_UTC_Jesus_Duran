@@ -10,16 +10,20 @@ public class ObjetoTipo {
 		// TODO Auto-generated method stub
 		//Variable de texto
 		String palabra = "Esta es una palabra";
+		
 		//Variables numericas
 		int num1 = 8;
 		double num2 = 8.8;
 		float num3 = (float) 2.2;
 		long num4 = 8888888;
 		short num5 = 888;
+		
 		//variable de tipo boolean
 		boolean verdadero = false;
+		
 		//Variable de tipo char
 		char letra = 'M';
+		
 		//Elementos de tipo listas
 		List<Integer> lista1 = new ArrayList<Integer>();
 		lista1.add(1);
@@ -31,6 +35,7 @@ public class ObjetoTipo {
 		lista2.add("Otra");
 		lista2.add("Y otra");
 		int[] arreglo = {2,3,4,6,7};
+		
 		//Llamada de la funcion
 		System.out.print(palabra+"->");verificarObjeto(palabra);
 		System.out.print(num1+"->");verificarObjeto(num1);

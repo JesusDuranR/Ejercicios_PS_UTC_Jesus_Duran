@@ -61,7 +61,7 @@ public class Principal {
 						if(lista.validarUsuario(user)) {
 							registroFallido = JOptionPane.showConfirmDialog (null, "El usuario ya existe\n¿Desea intentarlo con otro?","Usuario ya existe",dialogButton);
 						}else {
-							passw = JOptionPane.showInputDialog("Inicio de Sesion"
+							passw = JOptionPane.showInputDialog("Registro de usuario"
 									+ "\nIngrese su contraseña");
 							if(lista.crearUsuario(user, passw)) {
 								JOptionPane.showMessageDialog(null, "Usuario creado correctamente");
